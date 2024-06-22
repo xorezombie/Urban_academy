@@ -9,7 +9,6 @@ print(my_dict)
 
 my_set={14,'Denis',22+22,'Denis',33,13,True,False,True,1}
 print(my_set)
-my_set.add(1223)
-my_set.add('Kesha')
+my_set.update([1223, 'Valentina'])
 my_set.discard(13)
 print(my_set)
