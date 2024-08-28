@@ -23,3 +23,5 @@ print(House.house_history)
 
 del h2
 del h3
+
+print(House.house_history)
