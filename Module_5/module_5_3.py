@@ -21,50 +21,59 @@ class House:
             return self.number_of_floors == other.number_of_floors
         elif isinstance(other, int):
             return self.number_of_floors == other
+        return NotImplemented
 
     def __lt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors < other.number_of_floors
         elif isinstance(other, int):
             return self.number_of_floors < other
+        return NotImplemented
 
     def __le__(self, other):
         if isinstance(other, House):
             return self.number_of_floors <= other.number_of_floors
         elif isinstance(other, int):
             return self.number_of_floors <= other
+        return NotImplemented
 
     def __gt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors > other.number_of_floors
         elif isinstance(other, int):
             return self.number_of_floors > other
+        return NotImplemented
 
     def __ge__(self, other):
         if isinstance(other, House):
             return self.number_of_floors >= other.number_of_floors
         elif isinstance(other, int):
             return self.number_of_floors >= other
+        return NotImplemented
 
     def __ne__(self, other):
         if isinstance(other, House):
             return self.number_of_floors != other.number_of_floors
         elif isinstance(other, int):
             return self.number_of_floors != other
+        return NotImplemented
 
-    def __add__(self, other):
-        self.number_of_floors += other
-        return self
+    def __add__(self, value):
+        if isinstance(value, int):
+            self.number_of_floors += value
+            return self
+        return NotImplemented
 
-    def __radd__(self, other):
-        return self.__add__(other)
+    def __radd__(self, value):
+        return self.__add__(value)
 
-    def __iadd__(self, other):
-        return self.__add__(other)
+    def __iadd__(self, value):
+        return self.__add__(value)
 
-
+# Пример использования
 h1 = House('ЖК Олимп', 23)
 h2 = House('Дом у дороги', 4)
+
 
 print(h1)
 print(h2)

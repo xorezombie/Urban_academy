@@ -16,7 +16,7 @@ def calculate_structure_sum(data):
 
 
 data_structure = [
-  [1, 2, 3],
+  [1, 4, 2, 3],
   {'a': 4, 'b': 5},
   (6, {'cube': 7, 'drum': 8}),
   "Hello",
